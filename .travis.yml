@@ -1,4 +1,4 @@
-language: node_js
+language: node_js, android
 node_js:
   - "4"
 sudo: false
