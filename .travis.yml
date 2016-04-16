@@ -1,11 +1,14 @@
-language: node_js, android
+language: node_js
 node_js:
-  - "5"
+  - "4"
+jdk: oraclejdk7
+before_install:
+  - export ANDROID_HOME="$(pwd)/travis/android-sdk-linux"
+android:
+  components:
+    - build-tools-19.1.0               # BuildTools version
+    - android-19                       # SDK version
+    - sys-img-armeabi-v7a-android-19   # System image
 sudo: false
 script: "make travis"
 after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
-android:
-  components:
-  - build-tools-19.1.0               # BuildTools version
-  - android-19                       # SDK version
-  - sys-img-armeabi-v7a-android-19   # System image
