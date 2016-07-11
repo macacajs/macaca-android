@@ -1,12 +1,8 @@
 .DS_Store
 node_modules
 npm-debug.log
-*.swp
-*.swo
-*.swn
-*.swl
-*.swm
-.sw*
+*.sw*
+*.un~
 .idea/*
 Thumbs.db
 coverage/
