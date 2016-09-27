@@ -1,11 +1,11 @@
 .DS_Store
 node_modules
 npm-debug.log
-*.sw*
-*.un~
 .idea/*
 Thumbs.db
 coverage/
 logs/
 .project
 build/
+*.sw*
+*.un~
