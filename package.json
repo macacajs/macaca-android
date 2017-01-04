@@ -1,6 +1,6 @@
 {
   "name": "macaca-android",
-  "version": "1.0.25",
+  "version": "1.1.15",
   "description": "Macaca Android driver",
   "keywords": [
     "android"
@@ -18,18 +18,18 @@
     "macaca-chromedriver": "~1.0.1",
     "macaca-utils": "~0.1.6",
     "temp": "~0.8.3",
-    "uiautomator-client": "~1.0.1",
+    "uiautomator-client": "1.0.43",
     "unlock-apk": "~0.1.11",
     "webdriver-dfn-error-code": "~1.0.1",
     "xlogger": "~1.0.0"
   },
   "devDependencies": {
     "co-mocha": "*",
-    "mocha": "*",
-    "should": "*",
+    "istanbul": "^0.4.5",
     "jshint": "*",
-    "istanbul": "*",
-    "pre-commit": "1.1.1"
+    "mocha": "*",
+    "pre-commit": "1.1.1",
+    "should": "*"
   },
   "scripts": {
     "test": "make test",
