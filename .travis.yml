@@ -14,7 +14,7 @@ android:
     - android-26
 before_script:
     - wget http://services.gradle.org/distributions/gradle-3.3-all.zip
-    - unzip gradle-3.3-all.zip
+    - unzip gradle-3.3-all.zip > /dev/null
     - export GRADLE_HOME=$PWD/gradle-3.3
     - export PATH=$GRADLE_HOME/bin:$PATH
     - . $HOME/.nvm/nvm.sh
