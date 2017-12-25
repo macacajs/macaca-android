@@ -25,18 +25,19 @@
   },
   "devDependencies": {
     "co-mocha": "*",
-    "istanbul": "^0.4.5",
-    "jshint": "*",
+    "eslint": "^4.14.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "istanbul": "*",
     "mocha": "*",
-    "pre-commit": "*",
-    "should": "*"
+    "pre-commit": "*"
   },
   "scripts": {
-    "test": "make test",
-    "jshint": "make jshint"
+    "ci": "npm run lint && npm run test",
+    "test": "istanbul cover `npm bin`/_mocha",
+    "lint": "eslint --fix ."
   },
   "pre-commit": [
-    "jshint"
+    "lint"
   ],
   "homepage": "https://github.com/macacajs/macaca-android",
   "license": "MIT"

@@ -1,9 +1,11 @@
 'use strict';
 
-var Android = require('../lib/macaca-android');
+const assert = require('assert');
 
-describe('test', function() {
-  it('should be ok', function() {
-    Android.should.be.ok();
+const Android = require('../lib/macaca-android');
+
+describe('test', () => {
+  it('should be ok', () => {
+    assert.ok(Android);
   });
 });
