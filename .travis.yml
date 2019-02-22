@@ -13,15 +13,16 @@ android:
     - extra-google-android-support
     - android-26
 before_script:
-    - wget http://services.gradle.org/distributions/gradle-3.3-all.zip
-    - unzip gradle-3.3-all.zip > /dev/null
-    - export GRADLE_HOME=$PWD/gradle-3.3
+    - wget http://services.gradle.org/distributions/gradle-5.2-bin.zip
+    - unzip gradle-5.2-bin.zip > /dev/null
+    - export GRADLE_HOME=$PWD/gradle-5.2
     - export PATH=$GRADLE_HOME/bin:$PATH
     - . $HOME/.nvm/nvm.sh
     - nvm install 8
     - nvm use 8
 script:
   - npm i
-  - npm run ci
+  - npm run lint
+  - npm run test
 after_script:
   - npm install coveralls@2 && cat ./coverage/lcov.info | coveralls
